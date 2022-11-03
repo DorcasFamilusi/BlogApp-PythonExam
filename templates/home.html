@@ -1,0 +1,19 @@
+{% extends 'layout.html' %} {% block body %}
+<div class="jumbtron text-center">
+  <h1>Welcome To Dorcasity</h1>
+  <p class="lead">Blog built with Flask</p>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <h3>Latest Articles</h3>
+    <ul class="list-group">
+      {% for article in articles %}
+      <li class="list-group">
+        <a href="/article/{{ article.id }}">{{ article.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock %}
